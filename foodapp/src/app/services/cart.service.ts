@@ -42,6 +42,10 @@ export class CartService {
     this.setCartToLocalStorage();
   }
 
+  public getCart(): Cart {
+    return this.cartSubject.value;
+  }
+
   public getCartObservable(): Observable<Cart> {
     return this.cartSubject.asObservable();
   }
